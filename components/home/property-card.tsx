@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"; // Added Link import
 import { MapPin, Home } from "lucide-react";
 import {
   Card,
@@ -77,8 +78,8 @@ export function PropertyCard({ item }: { item: number }) {
       <CardFooter className="p-4 pt-0">
         <div className="flex w-full items-center justify-between">
           <span className="font-bold text-lg text-primary">2.5 tỷ</span>
-          <Button variant="outline" size="sm">
-            Chi tiết
+          <Button variant="outline" size="sm" asChild>
+            <Link href={`/mua-ban/property-${item}`}>Chi tiết</Link>
           </Button>
         </div>
       </CardFooter>
